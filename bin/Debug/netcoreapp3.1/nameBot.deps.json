@@ -9,10 +9,6 @@
       "nameBot/1.0.0": {
         "dependencies": {
           "Discord.Net": "2.2.0",
-          "Discord.Net.Commands": "2.2.0",
-          "Discord.Net.Rest": "2.2.0",
-          "Discord.Net.WebSocket": "2.2.0",
-          "Discord.Net.Webhook": "2.2.0",
           "Microsoft.Extensions.Configuration": "3.1.8",
           "Microsoft.Extensions.DependencyInjection": "3.1.8"
         },
