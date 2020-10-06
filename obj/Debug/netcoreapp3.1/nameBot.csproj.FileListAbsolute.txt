@@ -10,3 +10,17 @@
 /Users/jessicamcmahon/Desktop/nameBot/obj/Debug/netcoreapp3.1/nameBot.dll
 /Users/jessicamcmahon/Desktop/nameBot/obj/Debug/netcoreapp3.1/nameBot.pdb
 /Users/jessicamcmahon/Desktop/nameBot/obj/Debug/netcoreapp3.1/nameBot.genruntimeconfig.cache
+/Users/jessicamcmahon/Desktop/nameBot/bin/Debug/netcoreapp3.1/Discord.Net.Commands.dll
+/Users/jessicamcmahon/Desktop/nameBot/bin/Debug/netcoreapp3.1/Discord.Net.Core.dll
+/Users/jessicamcmahon/Desktop/nameBot/bin/Debug/netcoreapp3.1/Discord.Net.Rest.dll
+/Users/jessicamcmahon/Desktop/nameBot/bin/Debug/netcoreapp3.1/Discord.Net.Webhook.dll
+/Users/jessicamcmahon/Desktop/nameBot/bin/Debug/netcoreapp3.1/Discord.Net.WebSocket.dll
+/Users/jessicamcmahon/Desktop/nameBot/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.dll
+/Users/jessicamcmahon/Desktop/nameBot/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/jessicamcmahon/Desktop/nameBot/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll
+/Users/jessicamcmahon/Desktop/nameBot/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/jessicamcmahon/Desktop/nameBot/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll
+/Users/jessicamcmahon/Desktop/nameBot/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/Users/jessicamcmahon/Desktop/nameBot/bin/Debug/netcoreapp3.1/System.Interactive.Async.dll
+/Users/jessicamcmahon/Desktop/nameBot/bin/Debug/netcoreapp3.1/System.Linq.Async.dll
+/Users/jessicamcmahon/Desktop/nameBot/obj/Debug/netcoreapp3.1/nameBot.csproj.CopyComplete

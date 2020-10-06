@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vFgx7AbvOGvFKvwDgAixjWEc3m36QQ8ZMKFOO6kQ75V4IZk+4JA88w6r4sqJWRhIUCSRWZFsQpeHZm7uZ+iJgQ==",
+  "dgSpecHash": "36R/BmJD4H0dQILjviMDrrpAi/8yPDl4GPoPg4ztYCgf7U+9cg759TBKBbxtUA1UgBlVIFGfB9fiFBeHhCVzSw==",
   "success": true,
   "projectFilePath": "/Users/jessicamcmahon/Desktop/nameBot/nameBot.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,11 @@
     "/Users/jessicamcmahon/.nuget/packages/discord.net.rest/2.2.0/discord.net.rest.2.2.0.nupkg.sha512",
     "/Users/jessicamcmahon/.nuget/packages/discord.net.webhook/2.2.0/discord.net.webhook.2.2.0.nupkg.sha512",
     "/Users/jessicamcmahon/.nuget/packages/discord.net.websocket/2.2.0/discord.net.websocket.2.2.0.nupkg.sha512",
+    "/Users/jessicamcmahon/.nuget/packages/microsoft.extensions.configuration/3.1.8/microsoft.extensions.configuration.3.1.8.nupkg.sha512",
+    "/Users/jessicamcmahon/.nuget/packages/microsoft.extensions.configuration.abstractions/3.1.8/microsoft.extensions.configuration.abstractions.3.1.8.nupkg.sha512",
+    "/Users/jessicamcmahon/.nuget/packages/microsoft.extensions.dependencyinjection/3.1.8/microsoft.extensions.dependencyinjection.3.1.8.nupkg.sha512",
+    "/Users/jessicamcmahon/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/3.1.8/microsoft.extensions.dependencyinjection.abstractions.3.1.8.nupkg.sha512",
+    "/Users/jessicamcmahon/.nuget/packages/microsoft.extensions.primitives/3.1.8/microsoft.extensions.primitives.3.1.8.nupkg.sha512",
     "/Users/jessicamcmahon/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "/Users/jessicamcmahon/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "/Users/jessicamcmahon/.nuget/packages/newtonsoft.json/12.0.2/newtonsoft.json.12.0.2.nupkg.sha512",

@@ -1,14 +1,18 @@
 ﻿using System;
+using System.Reflection;
 using System.IO;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Discord;
+using Discord.API;
 using Discord.Commands;
 using Discord.WebSocket;
-using DiscordBot.Services;
+using Discord.Webhook;
+using Discord.Net;
 
-namespace DiscordBot
+
+namespace Discord
 {
     class Program
     {
@@ -25,6 +29,11 @@ namespace DiscordBot
               await Task.Delay(-1);
             }
 
+            private Task Log(LogMessage msg){
+              Console.WriteLine(msg.ToString());
+              return Task.CompletedTask;
+              }
+
 
           public class CommandHandler {
             private readonly DiscordSocketClient _client;
@@ -35,15 +44,15 @@ namespace DiscordBot
               _client = client;
             }
 
-            public async Task InstallCommandsAsync() {
-              _client.MessageRecieved += HandleCommandAsync;
-              await _commands.AddModulesAsync(assembly: Assembly.GetEntryAssembly(), services: null);
+            private async Task InstallCommandsAsync() {
+              await _commands.AddModulesAsync(Assembly.GetEntryAssembly(), null);
+              _client.MessageReceived += HandleCommandAsync;
             }
 
             private async Task HandleCommandAsync(SocketMessage messageParam){
               var message = messageParam as SocketUserMessage;
               if (message == null) return;
-              int argpos = 0;
+              int argPos = 0;
               if (!(message.HasCharPrefix('~', ref argPos) ||
             message.HasMentionPrefix(_client.CurrentUser, ref argPos)) ||
             message.Author.IsBot) return;

@@ -14,7 +14,7 @@ namespace nameBot.Modules {
 
           [Command("fname")]
                public async Task fname(){
-                await ReplyAsync(randFName);
+                await ReplyAsync(randFName());
                }
 
           [Command("ping")]
@@ -34,22 +34,22 @@ namespace nameBot.Modules {
           int syllables = rand.Next(1,5);
           switch (syllables) {
             case 1:
-              name += oneSyll[rand.Next(0,oneSyll.length)];
+              name += oneSyll[rand.Next(0,oneSyll.Length)];
               break;
             case 2:
-              name += stChunks[rand.Next(0, stChunks.length)];
-              name += endChunks[rand.Next(0, endChunks.length)];
+              name += stChunks[rand.Next(0, stChunks.Length)];
+              name += endChunks[rand.Next(0, endChunks.Length)];
               break;
             case 3:
-              name += stChunks[rand.Next(0, stChunks.length)];
-              name += midChunks[rand.Next(0, midChunks.length)];
-              name += endChunks[rand.Next(0, endChunks.length)];
+              name += stChunks[rand.Next(0, stChunks.Length)];
+              name += midChunks[rand.Next(0, midChunks.Length)];
+              name += endChunks[rand.Next(0, endChunks.Length)];
               break;
             case 4:
-              name += stChunks[rand.Next(0, stChunks.length)];
-              name += midChunks[rand.Next(0, midChunks.length)];
-              name += midChunks[rand.Next(0, midChunks.length)];
-              name += endChunks[rand.Next(0, endChunks.length)];
+              name += stChunks[rand.Next(0, stChunks.Length)];
+              name += midChunks[rand.Next(0, midChunks.Length)];
+              name += midChunks[rand.Next(0, midChunks.Length)];
+              name += endChunks[rand.Next(0, endChunks.Length)];
               break;
           }
           return name;
