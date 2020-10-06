@@ -64,7 +64,6 @@ namespace nameBot
                 .AddSingleton<CommandService>()
                 .AddSingleton<CommandHandlingService>()
                 .AddSingleton<HttpClient>()
-                .AddSingleton<PictureService>()
                 .BuildServiceProvider();
         }
     }
