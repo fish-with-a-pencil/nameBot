@@ -1438,7 +1438,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Discord.Net >= 2.2.0"
+      "Discord.Net >= *"
     ]
   },
   "packageFolders": {
@@ -1478,7 +1478,7 @@
         "dependencies": {
           "Discord.Net": {
             "target": "Package",
-            "version": "[2.2.0, )"
+            "version": "[*, )"
           }
         },
         "imports": [

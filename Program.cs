@@ -14,47 +14,50 @@ namespace DiscordBot
     {
         static void Main(string[] args)
             => new Program().MainAsync().GetAwaiter().GetResult();
+            private DiscordSocketClient _client;
 
-        private DiscordSocketClient _client;
-        private IConfiguration _config;
+            public async Task MainAsync() {
+              _client = new DiscordSocketClient();
+              _client.Log += Log;
+              await _client.LoginAsync(TokenType.Bot, Environment.GetEnvironmentVariable("DISCORD_TOKEN"));
+              await _client.StartAsync();
 
-        public async Task MainAsync()
-        {
-            _client = new DiscordSocketClient();
-            _config = BuildConfig();
+              await Task.Delay(-1);
+            }
 
-            var services = ConfigureServices();
-            services.GetRequiredService<LogService>();
-            await services.GetRequiredService<CommandHandlingService>().InitializeAsync(services);
 
-            await _client.LoginAsync(TokenType.Bot, _config["token"]);
-            await _client.StartAsync();
+          public class CommandHandler {
+            private readonly DiscordSocketClient _client;
+            private readonly CommandService _commands;
 
-            await Task.Delay(-1);
-        }
+            public CommandHandler(DiscordSocketClient client, CommandService commands) {
+              _commands = commands;
+              _client = client;
+            }
 
-        private IServiceProvider ConfigureServices()
-        {
-            return new ServiceCollection()
-                // Base
-                .AddSingleton(_client)
-                .AddSingleton<CommandService>()
-                .AddSingleton<CommandHandlingService>()
-                // Logging
-                .AddLogging()
-                .AddSingleton<LogService>()
-                // Extra
-                .AddSingleton(_config)
-                // Add additional services here...
-                .BuildServiceProvider();
-        }
+            public async Task InstallCommandsAsync() {
+              _client.MessageRecieved += HandleCommandAsync;
+              await _commands.AddModulesAsync(assembly: Assembly.GetEntryAssembly(), services: null);
+            }
 
-        private IConfiguration BuildConfig()
-        {
-            return new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("config.json")
-                .Build();
-        }
+            private async Task HandleCommandAsync(SocketMessage messageParam){
+              var message = messageParam as SocketUserMessage;
+              if (message == null) return;
+              int argpos = 0;
+              if (!(message.HasCharPrefix('~', ref argPos) ||
+            message.HasMentionPrefix(_client.CurrentUser, ref argPos)) ||
+            message.Author.IsBot) return;
+
+              var context = new SocketCommandContext(_client, message);
+              var result = await _commands.ExecuteAsync(
+            context: context,
+            argPos: argPos,
+            services: null);
+            }
+
+
+          }
+
+
     }
 }

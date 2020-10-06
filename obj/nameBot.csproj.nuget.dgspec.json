@@ -38,7 +38,7 @@
           "dependencies": {
             "Discord.Net": {
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[*, )"
             }
           },
           "imports": [
